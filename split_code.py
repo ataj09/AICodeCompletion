@@ -11,7 +11,7 @@ def read_files_from_repo(repo_path):
     return code_files
 
 
-def split_code(code, num_splits=30, min_chars2fill = 10):
+def split_code(code, num_splits=30, min_chars2fill = 10, max_chars2fill = 100):
     split_examples = []
     code_lines = code.split('\n')
     max_try_count = 10
@@ -38,7 +38,7 @@ def split_code(code, num_splits=30, min_chars2fill = 10):
             if try_count > max_try_count:
                 break
 
-            if len(middle) > min_chars2fill:
+            if len(middle) > min_chars2fill and len(middle) < max_chars2fill:
                 split_examples.append({
                     'prefix': prefix,
                     'middle': middle,
