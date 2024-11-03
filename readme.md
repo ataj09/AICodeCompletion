@@ -1,7 +1,8 @@
 # Code Completion Analysis Report
 
 ## Overview
-This report analyzes the performance of a code completion model tested on Python code samples, focusing on various audio and video processing functions.
+This report analyzes the performance of a code completion model tested on Python code samples, 
+focusing on various audio and video processing functions from another project (https://github.com/ataj09/ClearSpeech.
 
 ## Metrics Results
 - Average BLEU Score: 0.0242 (very low)
